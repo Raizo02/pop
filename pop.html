@@ -29,14 +29,14 @@
     }
     body {
       display: flex;
-      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       min-height: 100vh;
       margin: 0;
       padding: 32px 20px;
-      justify-content: center;
-      align-items: center;
       text-align: center;
       gap: 48px;
+      flex-direction: column;
     }
 
     /* Countdown Container - darker yellow background */
@@ -163,32 +163,30 @@
   </style>
 </head>
 <body>
-  <div class="container">
-    <section aria-label="Countdown timer" class="countdown" role="timer" aria-live="polite" aria-atomic="true">
-      <div class="countdown-title">COUNTDOWN</div>
-      <div class="countdown-items">
-        <div class="countdown-item">
-          <div class="countdown-value" id="days">00</div>
-          <div class="countdown-label">Days</div>
-        </div>
-        <div class="countdown-item">
-          <div class="countdown-value" id="hours">00</div>
-          <div class="countdown-label">Hours</div>
-        </div>
-        <div class="countdown-item">
-          <div class="countdown-value" id="minutes">00</div>
-          <div class="countdown-label">Minutes</div>
-        </div>
-        <div class="countdown-item">
-          <div class="countdown-value" id="seconds">00</div>
-          <div class="countdown-label">Seconds</div>
-        </div>
+  <section aria-label="Countdown timer" class="countdown" role="timer" aria-live="polite" aria-atomic="true">
+    <div class="countdown-title">COUNTDOWN</div>
+    <div class="countdown-items">
+      <div class="countdown-item">
+        <div class="countdown-value" id="days">00</div>
+        <div class="countdown-label">Days</div>
       </div>
-    </section>
-    <blockquote class="quote" aria-label="Motivational quote">
-      "TO BE THE BEST MILITARY OFFICER WITH THE HIGHEST LEVEL OF DISCIPLINE"
-    </blockquote>
-  </div>
+      <div class="countdown-item">
+        <div class="countdown-value" id="hours">00</div>
+        <div class="countdown-label">Hours</div>
+      </div>
+      <div class="countdown-item">
+        <div class="countdown-value" id="minutes">00</div>
+        <div class="countdown-label">Minutes</div>
+      </div>
+      <div class="countdown-item">
+        <div class="countdown-value" id="seconds">00</div>
+        <div class="countdown-label">Seconds</div>
+      </div>
+    </div>
+  </section>
+  <blockquote class="quote" aria-label="Motivational quote">
+    "TO BE THE BEST MILITARY OFFICER WITH THE HIGHEST LEVEL OF DISCIPLINE"
+  </blockquote>
 
   <script>
     (function() {
