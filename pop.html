@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ISTIADAT PERBARISAN PENTAULIAHAN DIRAJA PEGAWAI KADET ATM TAHUN 2025</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet"
+  />
+  <style>
+    /* Reset and global */
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #edf2f7;
+      height: 100%;
+      width: 100%;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    /* Header */
+    header {
+      position: sticky;
+      top: 0;
+      background: rgba(15, 32, 39, 0.85);
+      backdrop-filter: saturate(180%) blur(10px);
+      border-bottom: 1px solid rgba(255 255 255 / 0.1);
+      padding: 24px 32px;
+      text-align: center;
+      z-index: 1000;
+    }
+    header h1 {
+      font-weight: 900;
+      font-size: clamp(1.8rem, 4vw, 3rem);
+      line-height: 1.1;
+      color: #fde047; /* Yellow color */
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      user-select: none;
+      margin: 0;
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    main {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 32px 20px;
+      max-width: 1200px;
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      gap: 48px;
+      text-align: center;
+    }
+
+    /* Countdown Container - darker yellow background */
+    .countdown {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 32px;
+      max-width: 800px;
+      width: 100%;
+      padding: 32px 24px;
+      background: #bdaa2a; /* Darker yellow */
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+      user-select: none;
+    }
+    /* Countdown Title - steampunk style font */
+    .countdown-title {
+      font-family: 'MedievalSharp', cursive;
+      font-size: clamp(2rem, 6vw, 4rem);
+      color: #000000;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.3em;
+      user-select: none;
+      padding-bottom: 8px;
+      border-bottom: 2px solid #000000;
+      max-width: 100%;
+      justify-self: center;
+    }
+    /* Countdown Items Grid */
+    .countdown-items {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(80px, 1fr));
+      gap: 32px;
+    }
+
+    /* Countdown item box - white background */
+    .countdown-item {
+      background: #ffffff; /* White */
+      color: #000000; /* black text */
+      font-weight: 700;
+      padding: 24px 16px;
+      border-radius: 14px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+    .countdown-item:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+    }
+    .countdown-value {
+      font-size: clamp(2rem, 8vw, 5rem);
+      line-height: 1;
+      font-weight: 900;
+      margin-bottom: 8px;
+      font-variant-numeric: tabular-nums;
+      color: #000000; /* black */
+      user-select: text;
+    }
+    .countdown-label {
+      font-weight: 600;
+      font-size: 1rem;
+      color: #000000; /* black */
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      user-select: none;
+    }
+
+    /* Quote with same font as countdown title and white color */
+    .quote {
+      font-family: 'MedievalSharp', cursive;
+      font-size: clamp(1.5rem, 3vw, 2.5rem);
+      font-weight: 700;
+      font-style: normal;
+      max-width: 900px;
+      color: #ffffff;
+      padding: 0 12px;
+      user-select: none;
+      line-height: 1.4;
+      text-shadow: 0 0 10px rgba(0,0,0,0.7);
+      margin: 0;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 640px) {
+      .countdown {
+        padding: 24px 12px;
+      }
+      .countdown-title {
+        font-size: 2.5rem;
+        letter-spacing: 0.2em;
+      }
+      .countdown-items {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+      }
+      .countdown-value {
+        font-size: 4rem;
+      }
+      header h1 {
+        font-size: 1.6rem;
+        padding: 0 10px;
+      }
+      .quote {
+        font-size: 1.8rem;
+      }
+    }
+    @media (min-width: 641px) and (max-width: 1024px) {
+      .countdown-items {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 28px;
+      }
+      .countdown-value {
+        font-size: 5rem;
+      }
+      .quote {
+        font-size: 2.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>ISTIADAT PERBARISAN PENTAULIAHAN DIRAJA PEGAWAI KADET ATM TAHUN 2025</h1>
+  </header>
+  <main>
+    <section aria-label="Countdown timer" class="countdown" role="timer" aria-live="polite" aria-atomic="true">
+      <div class="countdown-title">COUNTDOWN</div>
+      <div class="countdown-items">
+        <div class="countdown-item">
+          <div class="countdown-value" id="days">00</div>
+          <div class="countdown-label">Days</div>
+        </div>
+        <div class="countdown-item">
+          <div class="countdown-value" id="hours">00</div>
+          <div class="countdown-label">Hours</div>
+        </div>
+        <div class="countdown-item">
+          <div class="countdown-value" id="minutes">00</div>
+          <div class="countdown-label">Minutes</div>
+        </div>
+        <div class="countdown-item">
+          <div class="countdown-value" id="seconds">00</div>
+          <div class="countdown-label">Seconds</div>
+        </div>
+      </div>
+    </section>
+    <blockquote class="quote" aria-label="Motivational quote">
+      "TO BE THE BEST MILITARY OFFICER WITH THE HIGHEST LEVEL OF DISCIPLINE"
+    </blockquote>
+  </main>
+
+  <script>
+    (function() {
+      const daysEl = document.getElementById('days');
+      const hoursEl = document.getElementById('hours');
+      const minutesEl = document.getElementById('minutes');
+      const secondsEl = document.getElementById('seconds');
+
+      // Target event date/time: 28 June 2025, 08:00:00 local time
+      const targetDate = new Date('2025-06-28T08:00:00');
+
+      function updateCountdown() {
+        const now = new Date();
+        const diff = targetDate - now;
+        if (diff <= 0) {
+          // Countdown ended
+          daysEl.textContent = '00';
+          hoursEl.textContent = '00';
+          minutesEl.textContent = '00';
+          secondsEl.textContent = '00';
+          clearInterval(timerInterval);
+          return;
+        }
+        const seconds = Math.floor((diff / 1000) % 60);
+        const minutes = Math.floor((diff / 1000 / 60) % 60);
+        const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+
+        daysEl.textContent = days.toString().padStart(2, '0');
+        hoursEl.textContent = hours.toString().padStart(2, '0');
+        minutesEl.textContent = minutes.toString().padStart(2, '0');
+        secondsEl.textContent = seconds.toString().padStart(2, '0');
+      }
+
+      updateCountdown();
+      const timerInterval = setInterval(updateCountdown, 1000);
+    })();
+  </script>
+</body>
+</html>
+
