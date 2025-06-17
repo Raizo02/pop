@@ -31,20 +31,27 @@
       display: flex;
       flex-direction: column;
       min-height: 100vh;
+      margin: 0;
+      padding: 0;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 32px 20px;
+      gap: 48px;
     }
 
-    /* Header */
-    header {
-      position: sticky;
-      top: 0;
-      background: rgba(15, 32, 39, 0.85);
-      backdrop-filter: saturate(180%) blur(10px);
-      border-bottom: 1px solid rgba(255 255 255 / 0.1);
-      padding: 24px 32px;
-      text-align: center;
-      z-index: 1000;
+    /* Combined header and content container */
+    .container {
+      max-width: 900px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 48px;
     }
-    header h1 {
+
+    /* Header as title */
+    .header-title {
       font-weight: 900;
       font-size: clamp(1.8rem, 4vw, 3rem);
       line-height: 1.1;
@@ -53,24 +60,7 @@
       text-transform: uppercase;
       user-select: none;
       margin: 0;
-      max-width: 1200px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    main {
-      flex-grow: 1;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      padding: 32px 20px;
-      max-width: 1200px;
-      width: 100%;
-      margin-left: auto;
-      margin-right: auto;
-      gap: 48px;
-      text-align: center;
+      max-width: 100%;
     }
 
     /* Countdown Container - darker yellow background */
@@ -154,14 +144,21 @@
       padding: 0 12px;
       user-select: none;
       line-height: 1.4;
-      text-shadow: 0 0 10px rgba(0,0,0,0.7);
       margin: 0;
+      text-shadow: 0 0 10px rgba(0,0,0,0.7);
     }
 
     /* Responsive adjustments */
     @media (max-width: 640px) {
-      .countdown {
+      body {
         padding: 24px 12px;
+        gap: 32px;
+      }
+      .header-title {
+        font-size: 1.8rem;
+      }
+      .countdown {
+        padding: 24px 16px;
       }
       .countdown-title {
         font-size: 2.5rem;
@@ -173,10 +170,6 @@
       }
       .countdown-value {
         font-size: 4rem;
-      }
-      header h1 {
-        font-size: 1.6rem;
-        padding: 0 10px;
       }
       .quote {
         font-size: 1.8rem;
@@ -197,10 +190,8 @@
   </style>
 </head>
 <body>
-  <header>
-    <h1>ISTIADAT PERBARISAN PENTAULIAHAN DIRAJA PEGAWAI KADET ATM TAHUN 2025</h1>
-  </header>
-  <main>
+  <div class="container">
+    <h1 class="header-title">ISTIADAT PERBARISAN PENTAULIAHAN DIRAJA PEGAWAI KADET ATM TAHUN 2025</h1>
     <section aria-label="Countdown timer" class="countdown" role="timer" aria-live="polite" aria-atomic="true">
       <div class="countdown-title">COUNTDOWN</div>
       <div class="countdown-items">
@@ -225,7 +216,7 @@
     <blockquote class="quote" aria-label="Motivational quote">
       "TO BE THE BEST MILITARY OFFICER WITH THE HIGHEST LEVEL OF DISCIPLINE"
     </blockquote>
-  </main>
+  </div>
 
   <script>
     (function() {
