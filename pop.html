@@ -32,35 +32,11 @@
       flex-direction: column;
       min-height: 100vh;
       margin: 0;
-      padding: 0;
+      padding: 32px 20px;
       justify-content: center;
       align-items: center;
       text-align: center;
-      padding: 32px 20px;
       gap: 48px;
-    }
-
-    /* Combined header and content container */
-    .container {
-      max-width: 900px;
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 48px;
-    }
-
-    /* Header as title */
-    .header-title {
-      font-weight: 900;
-      font-size: clamp(1.8rem, 4vw, 3rem);
-      line-height: 1.1;
-      color: #fde047; /* Yellow color */
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      user-select: none;
-      margin: 0;
-      max-width: 100%;
     }
 
     /* Countdown Container - darker yellow background */
@@ -154,9 +130,6 @@
         padding: 24px 12px;
         gap: 32px;
       }
-      .header-title {
-        font-size: 1.8rem;
-      }
       .countdown {
         padding: 24px 16px;
       }
@@ -191,7 +164,6 @@
 </head>
 <body>
   <div class="container">
-    <h1 class="header-title">ISTIADAT PERBARISAN PENTAULIAHAN DIRAJA PEGAWAI KADET ATM TAHUN 2025</h1>
     <section aria-label="Countdown timer" class="countdown" role="timer" aria-live="polite" aria-atomic="true">
       <div class="countdown-title">COUNTDOWN</div>
       <div class="countdown-items">
@@ -257,3 +229,4 @@
   </script>
 </body>
 </html>
+
